@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinnamon Rolls - A Roll of Happiness</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -39,7 +36,6 @@
 </head>
 <body class="bg-bakeryBg text-chocolate antialiased selection:bg-roseAccent selection:text-white">
 
-    <!-- 1. TOP ANNOUNCEMENT BAR -->
     <div class="bg-chocolate text-white text-xs md:text-sm py-2 px-4 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
             <div class="flex items-center gap-4">
@@ -48,18 +44,16 @@
             </div>
             <div class="flex items-center gap-2 font-semibold text-goldAccent">
                 <i class="fas fa-fire-flame-curved"></i>
-                <span>Assiut Launch: Spend 500 EGP or more for 10% Off + Earn CINBON Rewards Points!</span>
+                <span>Special Offer: Spend 500 EGP or more and get 10% Off your order!</span>
             </div>
         </div>
     </div>
 
-    <!-- 2. NAVBAR -->
     <nav class="bg-bakeryBg/95 backdrop-blur-md border-b border-amber-900/10 shadow-sm sticky top-8 z-40">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-rose-100 p-1 border-2 border-goldAccent shadow-md flex items-center justify-center overflow-hidden">
-                    <img src="logo.jpg" alt="Cinnamon Rolls Logo" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" onerror="this.src='https://placehold.co/100x100/3d2314/fff?text=Rolls'">
+                    <img src="logo.jpg" alt="Cinnamon Rolls Logo" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" onerror="this.src='logo.PNG'">
                 </div>
                 <div>
                     <span class="font-serif text-xl md:text-2xl font-bold tracking-wide text-chocolate block leading-tight">Cinnamon Rolls</span>
@@ -67,46 +61,39 @@
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
             <div class="hidden lg:flex items-center gap-8 font-semibold text-chocolate text-sm">
                 <a href="#hero" class="hover:text-roseAccent transition">Home</a>
                 <a href="#boxes" class="hover:text-roseAccent transition text-roseAccent font-bold">Mini Boxes 📦</a>
                 <a href="#menu" class="hover:text-roseAccent transition">Single Rolls</a>
-                <a href="#rewards" class="hover:text-roseAccent transition text-goldAccent font-bold flex items-center gap-1"><i class="fas fa-crown"></i> CINBON Rewards</a>
                 <a href="#about" class="hover:text-roseAccent transition">Quality & Freshness</a>
-                <a href="#special-offer" class="hover:text-roseAccent transition">Offers</a>
+                <a href="#special-offer" class="hover:text-roseAccent transition">Special Offers</a>
                 <a href="#contact" class="hover:text-roseAccent transition">Locations</a>
             </div>
 
-            <!-- Cart Trigger Button -->
             <div class="flex items-center gap-4">
                 <button onclick="toggleCart()" class="relative bg-chocolate text-white px-5 py-2.5 rounded-full shadow-lg hover:bg-amber-900 transition flex items-center gap-2 cursor-pointer">
                     <i class="fas fa-shopping-bag text-goldAccent"></i>
                     <span class="hidden sm:inline font-semibold text-sm">Your Bag</span>
                     <span id="cart-counter" class="bg-roseAccent text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold shadow">0</span>
                 </button>
-                <!-- Mobile Menu Button -->
                 <button onclick="toggleMobileMenu()" class="lg:hidden text-chocolate text-2xl focus:outline-none">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Dropdown Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4 shadow-xl">
             <div class="flex flex-col gap-3 font-semibold text-sm">
                 <a href="#hero" onclick="toggleMobileMenu()" class="hover:text-roseAccent">Home</a>
                 <a href="#boxes" onclick="toggleMobileMenu()" class="hover:text-roseAccent text-roseAccent font-bold">Mini Boxes 📦</a>
                 <a href="#menu" onclick="toggleMobileMenu()" class="hover:text-roseAccent">Single Rolls</a>
-                <a href="#rewards" onclick="toggleMobileMenu()" class="hover:text-roseAccent text-goldAccent font-bold">CINBON Rewards</a>
                 <a href="#about" onclick="toggleMobileMenu()" class="hover:text-roseAccent">Quality & Freshness</a>
-                <a href="#special-offer" onclick="toggleMobileMenu()" class="hover:text-roseAccent">Offers</a>
+                <a href="#special-offer" onclick="toggleMobileMenu()" class="hover:text-roseAccent">Special Offers</a>
                 <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-roseAccent">Locations</a>
             </div>
         </div>
     </nav>
 
-    <!-- 3. HERO SECTION -->
     <section id="hero" class="relative overflow-hidden py-14 lg:py-24 bg-gradient-to-b from-rose-50/60 to-bakeryBg border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -126,7 +113,6 @@
                         Handcrafted daily using 100% natural butter, real aromatic cinnamon, and molten signature glazes. Order single rolls or build your custom Mini Box for gathering happiness!
                     </p>
 
-                    <!-- Order Mode Selector Box -->
                     <div class="bg-white p-4 rounded-3xl border border-stone-200 shadow-sm max-w-lg space-y-3">
                         <div class="flex gap-2">
                             <button id="mode-delivery" onclick="setOrderMode('Delivery')" class="flex-1 py-2 rounded-2xl text-xs font-bold bg-chocolate text-white transition flex items-center justify-center gap-2">
@@ -142,7 +128,6 @@
                         </div>
                     </div>
 
-                    <!-- CTA Actions -->
                     <div class="flex flex-wrap gap-4 pt-2">
                         <a href="#boxes" class="bg-roseAccent hover:bg-rose-600 text-white font-bold px-8 py-4 rounded-full shadow-xl transition flex items-center gap-2">
                             <i class="fas fa-box-open"></i>
@@ -155,13 +140,11 @@
                     </div>
                 </div>
 
-                <!-- Featured Hero Showcase -->
                 <div class="relative flex justify-center">
                     <div class="absolute -inset-4 bg-gradient-to-r from-rose-200 to-amber-200 rounded-full blur-3xl opacity-50 -z-10 animate-pulse"></div>
                     <div class="relative w-72 h-72 sm:w-96 sm:h-96 md:w-[440px] md:h-[440px] rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                        <img src="hero.PNG" alt="Signature Cinnamon Roll" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x600/3d2314/fff?text=Cinnamon+Roll'">
+                        <img src="7D9607B2-CC1B-411F-920A-DABA995C0A6A.PNG" alt="Signature Cinnamon Roll" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='hero.PNG'">
                     </div>
-                    <!-- Floating Rating Badge -->
                     <div class="absolute bottom-4 left-4 sm:left-8 bg-white/95 backdrop-blur px-6 py-3 rounded-2xl shadow-xl border border-amber-100 flex items-center gap-3">
                         <div class="text-yellow-500 text-xl"><i class="fas fa-star"></i></div>
                         <div>
@@ -175,44 +158,6 @@
         </div>
     </section>
 
-    <!-- 4. CINBON REWARDS BANNER -->
-    <section id="rewards" class="bg-gradient-to-r from-[#3d2314] via-[#4d2c18] to-[#3d2314] text-white py-14 border-y border-goldAccent/30 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                <div class="lg:col-span-1 space-y-3 text-left">
-                    <div class="inline-flex items-center gap-2 bg-goldAccent text-chocolate px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow">
-                        <i class="fas fa-crown"></i> Official Loyalty Program
-                    </div>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold">CINBON Rewards</h2>
-                    <p class="text-sm text-stone-300 leading-relaxed">
-                        Every order brings you closer to free cinnamon rolls! Points are automatically accumulated on product values (excluding delivery) for repeat orders.
-                    </p>
-                </div>
-
-                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/20 text-left space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold text-goldAccent uppercase tracking-wider">Earn with Every Box</span>
-                            <i class="fas fa-coins text-goldAccent text-xl"></i>
-                        </div>
-                        <div class="font-serif text-3xl font-bold text-white">120 EGP = <span class="text-roseAccent">20 Points</span></div>
-                        <p class="text-xs text-stone-300">Points calculated automatically on delicious products value only.</p>
-                    </div>
-
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/20 text-left space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold text-goldAccent uppercase tracking-wider">Redeem Reward</span>
-                            <i class="fas fa-gift text-goldAccent text-xl"></i>
-                        </div>
-                        <div class="font-serif text-3xl font-bold text-white">250 Points = <span class="text-goldAccent">1 FREE CINBON 🍥</span></div>
-                        <p class="text-xs text-stone-300">Claim your favorite fresh roll for free when unlocking 250 points.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. MINI BOXES SECTION (Packets Builder - 4 pcs, 6 pcs, 9 pcs) -->
     <section id="boxes" class="py-16 lg:py-24 bg-rose-50/40 border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -222,14 +167,11 @@
                 <p class="text-stone-600 text-sm sm:text-base">Pick your box size and customize your favorite flavors freely from our handcrafted selection!</p>
             </div>
 
-            <!-- Boxes Cards Grid -->
             <div id="boxes-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Dynamically Rendered by JS -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- 6. SINGLE ROLLS MENU (Updated: No Dark Chocolate, Added Oreo & Rocher) -->
     <section id="menu" class="py-16 lg:py-24 max-w-7xl mx-auto px-4">
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
             <span class="text-roseAccent font-bold text-sm tracking-wider uppercase bg-rose-100/60 px-4 py-1 rounded-full">Handcrafted Fresh Daily</span>
@@ -238,19 +180,16 @@
             <p class="text-stone-600">Select your favorite freshly glazed rolls with official menu pricing.</p>
         </div>
 
-        <!-- Dynamic Menu Grid -->
         <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Injected by JavaScript -->
-        </div>
+            </div>
     </section>
 
-    <!-- 7. QUALITY & FRESHNESS SECTION (About) -->
     <section id="about" class="py-16 md:py-24 bg-white border-y border-stone-200">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="grid grid-cols-2 gap-4">
-                    <img src="div1.PNG" alt="Baking process" class="rounded-3xl shadow-lg w-full h-64 object-cover" onerror="this.src='https://placehold.co/400x300/3d2314/fff?text=Bakery'">
-                    <img src="div2.PNG" alt="Cinnamon rolls fresh" class="rounded-3xl shadow-lg w-full h-64 object-cover mt-8" onerror="this.src='https://placehold.co/400x300/e07a82/fff?text=Glaze'">
+                    <img src="53E04413-4E37-48B5-96EE-DAE60202BE8C.PNG" alt="Baking process" class="rounded-3xl shadow-lg w-full h-64 object-cover" onerror="this.src='div1.PNG'">
+                    <img src="716BFCBE-E485-440A-AA62-C6031258690B.PNG" alt="Cinnamon rolls fresh" class="rounded-3xl shadow-lg w-full h-64 object-cover mt-8" onerror="this.src='div2.PNG'">
                 </div>
                 <div class="space-y-6 text-left">
                     <span class="text-roseAccent font-bold text-sm tracking-wider uppercase bg-rose-50 px-3 py-1 rounded-full">Clean Kitchen Promise</span>
@@ -281,7 +220,6 @@
         </div>
     </section>
 
-    <!-- 8. SPECIAL OFFER PROMO BANNER -->
     <section id="special-offer" class="py-16 bg-chocolate text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-4xl mx-auto px-4 relative z-10 text-center space-y-6">
@@ -290,7 +228,7 @@
             </div>
             <h2 class="font-serif text-3xl md:text-5xl font-bold">Spend 500 EGP, Get 10% Off!</h2>
             <p class="text-stone-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-                Order boxes for your family, friends, or office gathering. If your cart reaches <strong>500 EGP or more</strong>, a <strong>10% discount</strong> is instantly deducted from your bill!
+                Order boxes for your family, friends, or office gathering. If your cart reaches <strong>500 EGP or more</strong>, a <strong>10% discount</strong> is automatically applied to your bill upon checkout!
             </p>
             <div class="pt-4">
                 <a href="#boxes" class="bg-roseAccent hover:bg-rose-600 text-white font-bold px-8 py-4 rounded-full shadow-lg transition inline-flex items-center gap-3">
@@ -301,7 +239,6 @@
         </div>
     </section>
 
-    <!-- 9. LOCATIONS & CONTACT (Assiut Coverage) -->
     <section id="contact" class="py-16 md:py-24 max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div class="space-y-6 text-left">
@@ -332,7 +269,6 @@
                 </div>
             </div>
 
-            <!-- Quick Inquiry Form -->
             <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm text-left">
                 <h3 class="font-serif text-2xl font-bold text-chocolate mb-2">Send Us a Quick Message</h3>
                 <p class="text-xs text-stone-500 mb-6">Have an event or custom box request? We reply on WhatsApp in minutes.</p>
@@ -358,14 +294,13 @@
         </div>
     </section>
 
-    <!-- 10. FOOTER -->
     <footer class="bg-chocolate text-white pt-16 pb-8 border-t border-amber-900/30">
         <div class="max-w-7xl mx-auto px-4 text-left">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-rose-100 p-1 border border-goldAccent flex items-center justify-center overflow-hidden">
-                            <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/100x100/3d2314/fff?text=Logo'">
+                            <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover rounded-full" onerror="this.src='logo.PNG'">
                         </div>
                         <span class="font-serif text-xl font-bold">Cinnamon Rolls</span>
                     </div>
@@ -385,17 +320,16 @@
                         <li><a href="#hero" class="hover:text-white transition">Home</a></li>
                         <li><a href="#boxes" class="hover:text-white transition">Mini Boxes</a></li>
                         <li><a href="#menu" class="hover:text-white transition">Single Rolls</a></li>
-                        <li><a href="#rewards" class="hover:text-white transition">CINBON Rewards</a></li>
+                        <li><a href="#about" class="hover:text-white transition">Our Quality</a></li>
                         <li><a href="#special-offer" class="hover:text-white transition">Special Discounts</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-goldAccent mb-4 text-base">CINBON Rewards</h4>
+                    <h4 class="font-bold text-goldAccent mb-4 text-base">Current Deals</h4>
                     <p class="text-xs text-stone-300 leading-relaxed space-y-1">
-                        <span class="block">✨ 120 EGP = 20 Points</span>
-                        <span class="block">🎁 250 Points = 1 Free Cinbon</span>
-                        <span class="block text-stone-400 mt-2">Points are calculated strictly on products value!</span>
+                        <span class="block">🎉 10% Off Orders over 500 EGP</span>
+                        <span class="block text-stone-400 mt-2">Discount applies instantly inside your shopping bag!</span>
                     </p>
                 </div>
 
@@ -414,12 +348,10 @@
         </div>
     </footer>
 
-    <!-- 11. SLIDE-OUT CART DRAWER & CHECKOUT -->
     <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
         <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
             <div class="w-screen max-w-md bg-bakeryBg shadow-2xl flex flex-col">
-                <!-- Cart Header -->
                 <div class="p-6 bg-chocolate text-white flex items-center justify-between">
                     <h2 class="font-serif text-xl font-bold flex items-center gap-2">
                         <i class="fas fa-shopping-bag text-goldAccent"></i>
@@ -430,26 +362,18 @@
                     </button>
                 </div>
 
-                <!-- Cart Items List -->
                 <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-items-container">
-                    <!-- Populated by JS -->
-                </div>
+                    </div>
 
-                <!-- Cart Summary & WhatsApp Checkout -->
                 <div class="p-6 bg-white border-t border-stone-200 shadow-lg space-y-4">
                     <div class="space-y-2 text-sm">
                         <div class="flex justify-between text-stone-600">
-                            <span>Subtotal (Products):</span>
+                            <span>Subtotal:</span>
                             <span id="cart-subtotal" class="font-bold">0 EGP</span>
                         </div>
                         <div id="discount-row" class="flex justify-between text-rose-600 font-bold hidden">
-                            <span>Bulk Offer (10%):</span>
+                            <span>Offer Discount (10%):</span>
                             <span id="cart-discount">-0 EGP</span>
-                        </div>
-                        <!-- Rewards Display Inside Cart -->
-                        <div class="flex justify-between text-xs text-goldAccent font-semibold bg-amber-50 p-2.5 rounded-xl border border-amber-200">
-                            <span>🎁 CINBON Rewards Points:</span>
-                            <span id="cart-earned-points" class="font-bold">+0 Points</span>
                         </div>
                         <div class="flex justify-between text-lg font-extrabold text-chocolate pt-2 border-t border-stone-100">
                             <span>Grand Total:</span>
@@ -457,7 +381,6 @@
                         </div>
                     </div>
 
-                    <!-- Checkout Form Inputs -->
                     <div class="space-y-3 pt-2 border-t border-stone-100">
                         <h4 class="font-bold text-xs text-stone-500 uppercase tracking-wider">Order & Delivery Details</h4>
                         <input type="text" id="order-name" placeholder="Full Name *" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-roseAccent">
@@ -470,7 +393,6 @@
                             <option value="Vodafone Cash">Payment: Vodafone Cash</option>
                         </select>
 
-                        <!-- Transfer Receipt Upload -->
                         <div id="receipt-upload-container" class="hidden space-y-1 bg-amber-50 p-3 rounded-xl border border-amber-200">
                             <label class="block text-xs font-bold text-amber-900">Upload Transfer Screenshot *</label>
                             <input type="file" id="transfer-receipt" accept="image/*" class="w-full text-xs text-stone-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-roseAccent file:text-white hover:file:bg-rose-600 cursor-pointer">
@@ -489,7 +411,6 @@
         </div>
     </div>
 
-    <!-- 12. BOX CUSTOMIZATION MODAL (Allows choosing exact flavors per pack) -->
     <div id="box-builder-modal" class="fixed inset-0 z-50 overflow-y-auto hidden">
         <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
             <div class="fixed inset-0 transition-opacity bg-black/70 backdrop-blur-sm" onclick="closeBoxModal()"></div>
@@ -504,16 +425,13 @@
                     <button onclick="closeBoxModal()" class="text-stone-400 hover:text-chocolate text-xl"><i class="fas fa-times"></i></button>
                 </div>
 
-                <!-- Remaining counter pill -->
                 <div class="bg-amber-50 p-3 rounded-2xl border border-amber-200 flex justify-between items-center text-xs font-bold text-chocolate">
                     <span>Remaining choices to select:</span>
                     <span id="modal-remaining-count" class="bg-roseAccent text-white px-3 py-1 rounded-full text-sm">4 left</span>
                 </div>
 
-                <!-- Available flavors list with plus/minus selectors -->
                 <div class="space-y-3 max-h-72 overflow-y-auto pr-1" id="modal-flavors-list">
-                    <!-- Injected by JS -->
-                </div>
+                    </div>
 
                 <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
                     <div>
@@ -528,7 +446,6 @@
         </div>
     </div>
 
-    <!-- 13. JAVASCRIPT APPLICATION LOGIC -->
     <script>
         // Flavors available for customization inside any Mini Box
         const availableFlavors = [
@@ -543,7 +460,7 @@
             "Nutella"
         ];
 
-        // Mini Boxes definition based on user prompt and provided images
+        // Mini Boxes definition
         const miniBoxes = [
             {
                 id: 101,
@@ -574,14 +491,14 @@
             }
         ];
 
-        // Updated Single Rolls Menu (Dark Chocolate removed, Oreo & Rocher added)
+        // Updated Single Rolls Menu (No Dark Chocolate, with Oreo & Rocher)
         const singleRolls = [
             {
                 id: 1,
                 name: "Classic",
                 price: 70,
                 desc: "The original that never gets old. Soft fluffy dough with cream cheese frosting and aromatic cinnamon.",
-                image: "Classic.JPG",
+                image: "D0F7793B-9FAD-4765-A402-B45D5115FB96.PNG",
                 badge: "70 EGP"
             },
             {
@@ -589,7 +506,7 @@
                 name: "Oreo",
                 price: 100,
                 desc: "Cream cheese frosting loaded with crushed real Oreo cookies & whole Oreo biscuit.",
-                image: "87A353ED-E764-48B5-BAA9-7D3FF2C8BA08.PNG",
+                image: "87A353ED-E764-48B5-BAA9-7D3FF2C8BA08.jpg",
                 badge: "100 EGP"
             },
             {
@@ -597,7 +514,7 @@
                 name: "Rocher",
                 price: 115,
                 desc: "Rich chocolate hazelnut cream infused with roasted crunchy hazelnut chunks.",
-                image: "WhatsApp Image 2026-10-07 at 22.03.07.jpeg",
+                image: "8A5EB7EA-22E0-4767-B73B-BEB3C1243F15.PNG",
                 badge: "115 EGP"
             },
             {
@@ -605,7 +522,7 @@
                 name: "White Chocolate",
                 price: 85,
                 desc: "Silky white chocolate drizzle topped with premium white chocolate chunks.",
-                image: "White Chocolate.JPG",
+                image: "8A5EB7EA-22E0-4767-B73B-BEB3C1243F15.PNG",
                 badge: "85 EGP"
             },
             {
@@ -613,7 +530,7 @@
                 name: "Lotus",
                 price: 100,
                 desc: "Drenched in Lotus Biscoff spread and crushed biscuit crumble with a whole Lotus cookie.",
-                image: "Lotus.JPG",
+                image: "857AFBD3-9FC4-49CB-97D0-023E7716AC35.PNG",
                 badge: "100 EGP"
             },
             {
@@ -621,14 +538,14 @@
                 name: "Raspberry",
                 price: 95,
                 desc: "Fresh vibrant raspberry fruit coulis and tart berries over sweet cream glaze.",
-                image: "Raspberry.JPG",
+                image: "FCF13E92-5934-4F38-B4B7-7BD894B511BA.PNG",
                 badge: "95 EGP"
             },
             {
                 id: 7,
                 name: "Caramel",
                 price: 100,
-                image: "Caramely.JPG",
+                image: "FC13E1B2-0B44-4AE4-9A84-66EE1876558A.PNG",
                 desc: "Rich buttery caramel sauce loaded with crunchy toasted pecan nuts.",
                 badge: "100 EGP"
             },
@@ -636,7 +553,7 @@
                 id: 8,
                 name: "Pistachio",
                 price: 125,
-                image: "Pistachio.JPG",
+                image: "FCF13E92-5934-4F38-B4B7-7BD894B511BA.PNG",
                 desc: "Luxurious creamy pistachio sauce topped with freshly crushed pistachio nuts.",
                 badge: "125 EGP"
             },
@@ -644,7 +561,7 @@
                 id: 9,
                 name: "Nutella",
                 price: 110,
-                image: "Nutella.JPG",
+                image: "857AFBD3-9FC4-49CB-97D0-023E7716AC35.PNG",
                 desc: "Generous swirl of authentic Nutella hazelnut spread with roasted hazelnuts.",
                 badge: "110 EGP"
             }
@@ -676,7 +593,7 @@
             grid.innerHTML = miniBoxes.map(box => `
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-stone-200 flex flex-col justify-between group">
                     <div class="relative overflow-hidden h-64 bg-rose-50">
-                        <img src="${box.image}" alt="${box.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x300/3d2314/fdfbf7?text=Mini+Box'">
+                        <img src="${box.image}" alt="${box.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='EE57884B-E282-48A5-8811-E3B0231FD9B7.PNG'">
                         <span class="absolute top-4 left-4 bg-chocolate text-goldAccent text-xs font-bold px-3 py-1.5 rounded-full shadow">
                             ${box.badge}
                         </span>
@@ -704,7 +621,7 @@
             grid.innerHTML = singleRolls.map(item => `
                 <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-200 flex flex-col justify-between group">
                     <div class="relative overflow-hidden h-56 bg-rose-50">
-                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/400x300/3d2314/fdfbf7?text=Cinnamon+Roll'">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='D0F7793B-9FAD-4765-A402-B45D5115FB96.PNG'">
                         <span class="absolute top-3 left-3 bg-chocolate text-goldAccent text-xs font-bold px-3 py-1 rounded-full shadow">
                             ${item.badge}
                         </span>
@@ -749,7 +666,7 @@
         function updateModalFlavorQty(flavor, delta) {
             const currentTotal = Object.values(selectedBoxFlavors).reduce((a, b) => a + b, 0);
             if (delta > 0 && currentTotal >= activeBox.capacity) {
-                return; // Capacity reached
+                return;
             }
             if (delta < 0 && selectedBoxFlavors[flavor] <= 0) {
                 return;
@@ -834,11 +751,11 @@
         }
 
         function updateQty(cartId, change) {
-            const item = cart.find(i => i.id === cartId);
+            const item = cart.find(i => i.id == cartId);
             if (item) {
                 item.qty += change;
                 if (item.qty <= 0) {
-                    cart = cart.filter(i => i.id !== cartId);
+                    cart = cart.filter(i => i.id != cartId);
                 }
             }
             updateCartCounter();
@@ -864,7 +781,7 @@
                 container.innerHTML = cart.map(item => `
                     <div class="flex items-center justify-between bg-stone-50 p-3 rounded-2xl border border-stone-200">
                         <div class="flex items-center gap-3 text-left">
-                            <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-xl object-cover" onerror="this.src='https://placehold.co/100x100/3d2314/fdfbf7?text=Roll'">
+                            <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-xl object-cover" onerror="this.src='D0F7793B-9FAD-4765-A402-B45D5115FB96.PNG'">
                             <div>
                                 <h4 class="font-bold text-chocolate text-sm">${item.name}</h4>
                                 ${item.isBox ? `<p class="text-[10px] text-stone-500 max-w-[180px] leading-tight mb-1"><i class="fas fa-cookie mr-1 text-goldAccent"></i>${item.flavorsDetail}</p>` : ''}
@@ -872,9 +789,9 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-2">
-                            <button onclick="updateQty('${item.id}', -1)" class="w-7 h-7 bg-stone-200 hover:bg-stone-300 rounded-lg flex items-center justify-center font-bold text-xs">-</button>
+                            <button onclick="updateQty('${item.id}', -1)" class="w-7 h-7 bg-stone-200 hover:bg-stone-300 rounded-lg flex items-center justify-center font-bold text-xs cursor-pointer">-</button>
                             <span class="text-sm font-bold w-6 text-center">${item.qty}</span>
-                            <button onclick="updateQty('${item.id}', 1)" class="w-7 h-7 bg-stone-200 hover:bg-stone-300 rounded-lg flex items-center justify-center font-bold text-xs">+</button>
+                            <button onclick="updateQty('${item.id}', 1)" class="w-7 h-7 bg-stone-200 hover:bg-stone-300 rounded-lg flex items-center justify-center font-bold text-xs cursor-pointer">+</button>
                         </div>
                     </div>
                 `).join('');
@@ -888,7 +805,6 @@
             const cartSubtotal = document.getElementById('cart-subtotal');
             const cartDiscount = document.getElementById('cart-discount');
             const cartTotal = document.getElementById('cart-total');
-            const cartEarnedPoints = document.getElementById('cart-earned-points');
 
             cartSubtotal.innerText = subtotal + ' EGP';
 
@@ -903,11 +819,6 @@
             }
 
             cartTotal.innerText = finalTotal.toFixed(0) + ' EGP';
-
-            // CINBON Rewards: 120 EGP = 20 Points
-            const earnedPoints = Math.floor(subtotal / 120) * 20;
-            cartEarnedPoints.innerText = `+${earnedPoints} Points`;
-            window.currentEarnedPoints = earnedPoints;
         }
 
         function toggleMobileMenu() {
@@ -955,7 +866,6 @@
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
             let discount = subtotal >= 500 ? subtotal * 0.10 : 0;
             let finalTotal = subtotal - discount;
-            const earnedPoints = window.currentEarnedPoints || 0;
 
             let message = `*New Order - Cinnamon Rolls Assiut* 🥐✨\n\n`;
             message += `🛵 *Order Mode:* ${currentOrderMode}\n`;
@@ -966,7 +876,6 @@
             if (receiptAttached) {
                 message += `📸 *Transfer Receipt:* [Payment Screenshot Attached By User]\n`;
             }
-            message += `🎁 *CINBON Rewards Earned:* +${earnedPoints} Points\n`;
             if (notes) message += `📝 *Notes:* ${notes}\n\n`;
             message += `🛒 *Items Ordered:*\n`;
 
@@ -979,9 +888,9 @@
             });
 
             message += `\n------------------\n`;
-            message += `💰 *Products Subtotal:* ${subtotal} EGP\n`;
+            message += `💰 *Subtotal:* ${subtotal} EGP\n`;
             if (discount > 0) {
-                message += `🎁 *Bulk Discount (10%):* -${discount.toFixed(0)} EGP\n`;
+                message += `🎁 *Discount (10% Off > 500 EGP):* -${discount.toFixed(0)} EGP\n`;
             }
             message += `🌟 *Final Grand Total:* ${finalTotal.toFixed(0)} EGP\n`;
             message += `------------------\n`;
